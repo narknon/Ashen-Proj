@@ -19,7 +19,7 @@ class UPrimitiveComponent;
 class AHero;
 
 UCLASS(Blueprintable)
-class ASHEN_API ACritterTrap : public AActor, public IInteractionSource {
+class ASHEN_API ACritterTrap : public AActor/*, public IInteractionSource*/ {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

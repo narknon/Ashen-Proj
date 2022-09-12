@@ -15,7 +15,7 @@ class AHero;
 class ACreature;
 
 UCLASS(Blueprintable)
-class ASHEN_API AWorldConsumable : public AActor, public IInteractionSource {
+class ASHEN_API AWorldConsumable : public AActor/*, public IInteractionSource*/ {
     GENERATED_BODY()
 public:
 protected:

@@ -20,7 +20,7 @@ void ACreature::UpdateSpawnFade(float DeltaSeconds) {
 void ACreature::UpdateDisintegration(float DeltaSeconds) {
 }
 
-void ACreature::SynchronizeRemote_Implementation(FAshenSerialization ActionData, bool bIsWoken, FVector Location, FRotator Rotation, TEnumAsByte<EMovementMode> MovementMode, FName ColProfile, FName ColProfileBeforeSleep) {
+void ACreature::SynchronizeRemote_Implementation(FAshenSerialization ActionData, bool bIsWoken, FVector Location, FRotator Rotation, EMovementMode MovementMode, FName ColProfile, FName ColProfileBeforeSleep) {
 }
 
 void ACreature::SpawnDebugArmEffects() {

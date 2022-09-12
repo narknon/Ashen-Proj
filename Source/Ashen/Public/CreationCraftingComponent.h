@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "CraftingComponent.h"
 #include "ENpcType.h"
+#include "ItemBase.h"
 #include "CreationCraftingComponent.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

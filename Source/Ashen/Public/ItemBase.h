@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "Recipe.h"
 #include "UObject/Object.h"
 #include "EItemQuality.h"
 #include "EItemPluralityPreface.h"
@@ -12,11 +11,12 @@
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "EQuestItem.h"
+#include "Recipe.h"
+
 #include "UIStatBarData.h"
 #include "ItemBase.generated.h"
 
 class UStaticMesh;
-class UItemBase;
 class APhysicalItem;
 class UItemTable;
 class UPaperSprite;

@@ -19,7 +19,7 @@ class AActor;
 class ACreature;
 
 UCLASS(Blueprintable)
-class ASHEN_API ASavePoint : public ATravelPoint, public IInteractionSource {
+class ASHEN_API ASavePoint : public ATravelPoint/*, public IInteractionSource*/ {
     GENERATED_BODY()
 public:
 protected:

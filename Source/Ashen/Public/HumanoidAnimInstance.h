@@ -486,13 +486,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool WalkingRunningOrSprinting();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void SprintReset(const FAnimNode_StateMachine& SM, int32 prev, int32 Next);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool MovementActionActive();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AnimReset(const FAnimNode_StateMachine& SM, int32 prev, int32 Next);
     
 };

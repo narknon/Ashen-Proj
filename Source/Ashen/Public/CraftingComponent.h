@@ -14,7 +14,6 @@ class UAshenUserWidget;
 class AHero;
 class UAkAudioEvent;
 class UInteraction;
-class UItemBase;
 class ACreature;
 class UObject;
 

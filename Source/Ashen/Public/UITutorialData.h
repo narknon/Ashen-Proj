@@ -6,9 +6,10 @@
 #include "EInputEventNames.h"
 #include "EItemType.h"
 #include "EUITutorialPosition.h"
+#include "ItemBase.h"
 #include "UITutorialData.generated.h"
 
-class UItemBase;
+
 class UUserWidget;
 class UUIMenuTutorial;
 

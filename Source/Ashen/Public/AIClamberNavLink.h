@@ -1,9 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavLinkProxy -FallbackName=NavLinkProxy
+#include "AI/Navigation/NavLinkProxy.h"
 #include "UObject/NoExportTypes.h"
 #include "EActionState.h"
+#include "AI/Navigation/NavLinkProxy.h"
 #include "AIClamberNavLink.generated.h"
 
 class AActor;

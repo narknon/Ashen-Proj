@@ -63,7 +63,7 @@ class UAIWeaponAttack;
 class UAIEvade;
 
 UCLASS(Blueprintable)
-class ASHEN_API ACreature : public ACharacter, public INetworkActorInterface {
+class ASHEN_API ACreature : public ACharacter/*, public INetworkActorInterface*/ {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FStateChangeDelegate, ACreature*, Source, TEnumAsByte<EMovementMode>, PreviousMovementMode, uint8, PreviousSubState);
@@ -577,7 +577,7 @@ protected:
     
 public:
     UFUNCTION(Client, Reliable)
-    void SynchronizeRemote(FAshenSerialization ActionData, bool bIsWoken, FVector Location, FRotator Rotation, TEnumAsByte<EMovementMode> MovementMode, FName ColProfile, FName ColProfileBeforeSleep);
+    void SynchronizeRemote(FAshenSerialization ActionData, bool bIsWoken, FVector Location, FRotator Rotation, EMovementMode MovementMode, FName ColProfile, FName ColProfileBeforeSleep);
     
     UFUNCTION(BlueprintCallable)
     void SpawnDebugArmEffects();
@@ -766,7 +766,7 @@ public:
     
     // Fix for true pure virtual functions not being implemented
 private:
-    UFUNCTION()
+    /*UFUNCTION()
     void SetRemoteRole(TEnumAsByte<ENetRole> NetRole) override PURE_VIRTUAL(SetRemoteRole,);
     
     UFUNCTION()
@@ -785,7 +785,7 @@ private:
     void AuthorityReset() override PURE_VIRTUAL(AuthorityReset,);
     
     UFUNCTION()
-    void AuthorityInitialise() override PURE_VIRTUAL(AuthorityInitialise,);
+    void AuthorityInitialise() override PURE_VIRTUAL(AuthorityInitialise,);*/
     
 };
 

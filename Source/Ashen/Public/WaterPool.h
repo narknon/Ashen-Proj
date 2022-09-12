@@ -13,7 +13,7 @@ class UAISpawnManager;
 class ACreature;
 
 UCLASS(Blueprintable)
-class ASHEN_API AWaterPool : public AActor, public IInteractionSource {
+class ASHEN_API AWaterPool : public AActor/*, public IInteractionSource*/ {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

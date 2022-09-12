@@ -8,7 +8,7 @@
 class UNetworkComponent;
 
 UCLASS(Abstract, Blueprintable)
-class ASHEN_API ANetworkActor : public AActor, public INetworkActorInterface {
+class ASHEN_API ANetworkActor : public AActor/*, public INetworkActorInterface*/ {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
@@ -21,7 +21,7 @@ public:
     
     // Fix for true pure virtual functions not being implemented
 private:
-    UFUNCTION()
+    /*UFUNCTION()
     void SetRemoteRole(TEnumAsByte<ENetRole> NetRole) override PURE_VIRTUAL(SetRemoteRole,);
     
     UFUNCTION()
@@ -40,7 +40,7 @@ private:
     void AuthorityReset() override PURE_VIRTUAL(AuthorityReset,);
     
     UFUNCTION()
-    void AuthorityInitialise() override PURE_VIRTUAL(AuthorityInitialise,);
+    void AuthorityInitialise() override PURE_VIRTUAL(AuthorityInitialise,);*/
     
 };
 

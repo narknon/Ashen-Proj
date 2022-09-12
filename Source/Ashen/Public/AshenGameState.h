@@ -18,7 +18,7 @@ class ACorpseRunLoot;
 class ACreature;
 class UAshenEventData;
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class ASHEN_API AAshenGameState : public AAshenBaseGameState {
     GENERATED_BODY()
 public:

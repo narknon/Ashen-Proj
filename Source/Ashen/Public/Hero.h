@@ -73,7 +73,7 @@ class AAshenAudioVolume;
 class UQuestLine;
 class UAnimInstance;
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class ASHEN_API AHero : public AHumanoid {
     GENERATED_BODY()
 public:
