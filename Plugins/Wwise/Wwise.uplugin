@@ -1,0 +1,32 @@
+{
+	"FileVersion": 3,
+	"Version": 201720917,
+	"VersionName": "2017.2.3.6575.917",
+	"FriendlyName": "Wwise Unreal Engine 4 Integration",
+	"Description": "Wwise integration for Unreal Engine 4",
+	"Category": "Audio",
+	"CreatedBy": "Audiokinetic, Inc.",
+	"CreatedByURL": "http://audiokinetic.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "4.19.0",
+	"EnabledByDefault": true,
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "AkAudio",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "MatineeToLevelSequence",
+			"Enabled": true
+		}
+	]
+}

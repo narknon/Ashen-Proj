@@ -1,0 +1,12 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "BehaviorTree/BTDecorator.h"
+#include "BTD_HasTakenHeroDamage.generated.h"
+
+UCLASS(Blueprintable)
+class ASHEN_API UBTD_HasTakenHeroDamage : public UBTDecorator {
+    GENERATED_BODY()
+public:
+    UBTD_HasTakenHeroDamage();
+};
+

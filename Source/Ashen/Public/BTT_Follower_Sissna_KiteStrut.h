@@ -1,0 +1,21 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "BTT_AshenPathTo.h"
+#include "BTT_Follower_Sissna_KiteStrut.generated.h"
+
+UCLASS(Blueprintable)
+class ASHEN_API UBTT_Follower_Sissna_KiteStrut : public UBTT_AshenPathTo {
+    GENERATED_BODY()
+public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float EvadeHalfAngle;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float EvadeMinDistance;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float EvadeMaxDistance;
+    
+    UBTT_Follower_Sissna_KiteStrut();
+};
+
