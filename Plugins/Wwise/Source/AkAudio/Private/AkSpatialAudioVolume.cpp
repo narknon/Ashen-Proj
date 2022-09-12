@@ -1,11 +1,42 @@
-#include "AkSpatialAudioVolume.h"
-#include "AkSurfaceReflectorSetComponent.h"
-#include "AkLateReverbComponent.h"
-#include "AkRoomComponent.h"
+// Copyright (c) 2006-2012 Audiokinetic Inc. / All Rights Reserved
 
-AAkSpatialAudioVolume::AAkSpatialAudioVolume() {
-    this->SurfaceReflectorSet = CreateDefaultSubobject<UAkSurfaceReflectorSetComponent>(TEXT("SurfaceReflector"));
-    this->LateReverb = CreateDefaultSubobject<UAkLateReverbComponent>(TEXT("LateReverb"));
-    this->Room = CreateDefaultSubobject<UAkRoomComponent>(TEXT("Room"));
+/*=============================================================================
+	AkReverbVolume.cpp:
+=============================================================================*/
+
+#include "AkAudioDevice.h"
+#include "AkAudioClasses.h"
+#include "Net/UnrealNetwork.h"
+#include "Components/BrushComponent.h"
+#include "Model.h"
+/*------------------------------------------------------------------------------------
+	AAkSpatialAudioVolume
+------------------------------------------------------------------------------------*/
+
+AAkSpatialAudioVolume::AAkSpatialAudioVolume(const class FObjectInitializer& ObjectInitializer) :
+	Super(ObjectInitializer)
+{
+	// Property initialization
+	static const FName CollisionProfileName(TEXT("OverlapAll"));
+	UBrushComponent* BrushComp = GetBrushComponent();
+	if (BrushComp)
+	{
+		BrushComp->SetCollisionProfileName(CollisionProfileName);
+	}
+
+	static const FName SurfReflSetName = TEXT("SurfaceReflector");
+	SurfaceReflectorSet = ObjectInitializer.CreateDefaultSubobject<UAkSurfaceReflectorSetComponent>(this, SurfReflSetName);
+	SurfaceReflectorSet->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+
+	static const FName LateReverbame = TEXT("LateReverb");
+	LateReverb = ObjectInitializer.CreateDefaultSubobject<UAkLateReverbComponent>(this, LateReverbame);
+	LateReverb->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+
+	static const FName RoomName = TEXT("Room");
+	Room = ObjectInitializer.CreateDefaultSubobject<UAkRoomComponent>(this, RoomName);
+	Room->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
+
+	bColored = true;
+	BrushColor = FColor(109, 187, 255, 255);
 }
 

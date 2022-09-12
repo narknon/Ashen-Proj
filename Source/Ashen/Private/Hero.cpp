@@ -353,7 +353,7 @@ AHero::AHero() {
     this->MaxDamageFreezeTime = 0.01f;
     this->bRefreshFreezeTime = true;
     this->bReplicateFreeze = true;
-    this->HeroVitalAttributes = CreateDefaultSubobject<UHeroVitalAttributes>(TEXT("VitalAttributes"));
+    /*this->HeroVitalAttributes = CreateDefaultSubobject<UHeroVitalAttributes>(TEXT("VitalAttributes"));*/
     this->InteractiveQueue = CreateDefaultSubobject<UInteractiveQueueComponent>(TEXT("InteractiveQueue"));
     this->PositionPingLifetime = 5.00f;
     this->PlayerController = NULL;
